@@ -3,7 +3,7 @@
 class CommentsPost extends CommentsAppModel {
 		
 	var $belongsTo = array(
-		'UacProfile' => array('className' => 'Uac.UacProfile', 'foreignKey' => 'profile_id')
+		'UacProfile' => array('className' => 'Uac.UacProfile', 'foreignKey' => 'user_id')
 	);
 	
 	var $order = array('CommentsPost.sticky DESC', 'CommentsPost.created DESC');
@@ -19,7 +19,7 @@ class CommentsPost extends CommentsAppModel {
 		
 		$comment = $this->read(null, $post_id);
 		
-		if ($comment['CommentsPost']['profile_id'] != $user_id) {
+		if ($comment['CommentsPost']['user_id'] != $user_id) {
 			
 			return false;
 			

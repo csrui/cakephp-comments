@@ -7,7 +7,7 @@ class CommentsPostsController extends CommentsAppController {
 		
 		if (!empty($this->data)) {
 						
-			$this->data['CommentsPost']['profile_id'] = $this->Auth->user('id');
+			$this->data['CommentsPost']['user_id'] = $this->Auth->user('id');
 			
 			$this->CommentsPost->create($this->data);
 			if ($this->CommentsPost->save($this->data)) {

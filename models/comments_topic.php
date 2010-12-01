@@ -2,6 +2,8 @@
 
 class CommentsTopic extends CommentsAppModel {
 	
+	var $useTable = false; # NOT USED FOR NOW
+	
 	var $hasMany = array('CommentsPost' => array(
 		'className' => 'Comments.CommentsPost',
 		'conditions' => array('CommentsPost.rel_model' => 'CommentsTopic'),
@@ -9,7 +11,7 @@ class CommentsTopic extends CommentsAppModel {
 		'order' => 'CommentsPost.created DESC'
 	));
 	
-	var $belongsTo = array('UaUser' => array('className' => 'Ua.UaUser', 'foreignKey' => 'user_id'));
+	var $belongsTo = array('UacProfile' => array('className' => 'Uac.UacProfile', 'foreignKey' => 'user_id'));
 	
 	var $order = array(
 		'CommentsTopic.sticky DESC',
