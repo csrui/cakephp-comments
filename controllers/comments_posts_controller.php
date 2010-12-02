@@ -20,6 +20,8 @@ class CommentsPostsController extends CommentsAppController {
 			
 		}
 		
+		$this->Session->setFlash(__('Unable to save your comment', true));
+		$this->redirect($this->referer());
 		return false;
 		
 	}

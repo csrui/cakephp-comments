@@ -8,6 +8,19 @@ class CommentsPost extends CommentsAppModel {
 	
 	var $order = array('CommentsPost.sticky DESC', 'CommentsPost.created DESC');
 	
+	var $validate = array(
+		'body' => array(
+			'notempty' => array(
+				'rule' => array('notempty'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		)
+	);
+	
 	/**
 	 * 
 	 * Check if post can be deleted
