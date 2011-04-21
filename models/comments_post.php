@@ -43,6 +43,12 @@ class CommentsPost extends CommentsAppModel {
 		
 	}
 	
+	function savePost($data) {
+		
+		#TODO Refactor controller code to model
+		
+	}
+	
 	function getRelatedTo($model, $rel_foreign_key, $options = null) {
 		
 		$cond = array(

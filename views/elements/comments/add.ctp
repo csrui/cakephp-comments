@@ -1,6 +1,6 @@
 <?php
 
-	echo $this->element('user_avatar', array('profile' => $uac->get('UacProfile')));
+	echo $this->element('avatar', array('profile' => $uac->get('UacProfile')));
 
 	echo $this->Form->create('CommentsPost', array('url' => array('plugin' => 'comments', 'controller' => 'comments_posts', 'action' => 'add')));
 	echo $this->Form->input('CommentsPost.body', array('label' => 'Comment', 'type' => 'textarea', 'rows' => 2));

@@ -7,7 +7,7 @@ class CommentsPostsController extends CommentsAppController {
 		
 		if (!empty($this->data)) {
 						
-			$this->data['CommentsPost']['user_id'] = $this->Auth->user('id');
+			$this->data['CommentsPost']['user_id'] = $this->Account->id();
 			
 			$this->CommentsPost->create($this->data);
 			if ($this->CommentsPost->save($this->data)) {
@@ -33,7 +33,7 @@ class CommentsPostsController extends CommentsAppController {
 	 */
 	function delete($id) {
 		
-		if ($this->CommentsPost->deletePost($id, $this->Auth->user('id'))) {
+		if ($this->CommentsPost->deletePost($id, $this->Account->id())) {
 			
 			$this->Session->setFlash(__('Comment deleted', true));
 			$this->redirect($this->referer());
