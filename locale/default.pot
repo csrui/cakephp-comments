@@ -1,0 +1,40 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2011-04-24 18:03+0100\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: /controllers/comments_posts_controller.php:15
+msgid "Comment saved"
+msgstr ""
+
+#: /controllers/comments_posts_controller.php:23
+msgid "Unable to save your comment"
+msgstr ""
+
+#: /controllers/comments_posts_controller.php:38
+msgid "Comment deleted"
+msgstr ""
+
+#: /controllers/comments_posts_controller.php:43
+msgid "You cannot delete that comment"
+msgstr ""
+
+#: /views/elements/comments/post.ctp:23
+msgid "Delete comment"
+msgstr ""
+
+#: /views/elements/comments/post.ctp:43
+msgid "comment deleted by the author"
+msgstr ""
+
